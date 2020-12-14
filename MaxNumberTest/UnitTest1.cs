@@ -51,7 +51,7 @@ namespace MaxNumberTest
         }
 
         /// <summary>
-        /// TC1.1 When Three Float are given to the method and largest number among all numbers is at position 1st, this test case should pass
+        /// TC1.1 When Three Floats are given to the method and largest number among all numbers is at position 1st, this test case should pass
         /// </summary>
         /// <param name="firstValue">firstValue will be maximum of all three Float values</param>
         /// <param name="secondValue">secondValue contain Float value</param>
@@ -66,7 +66,7 @@ namespace MaxNumberTest
         }
 
         /// <summary>
-        /// TC1.2 When Three Float are given to the method and largest number among all numbers is at position 2nd, this test case should pass
+        /// TC1.2 When Three Floats are given to the method and largest number among all numbers is at position 2nd, this test case should pass
         /// </summary>
         /// <param name="firstValue">firstValue will contain float value</param>
         /// <param name="secondValue">secondValue will be maximum of all three float values</param>
@@ -81,7 +81,7 @@ namespace MaxNumberTest
         }
 
         /// <summary>
-        /// TC1.3 When Three float are given to the method and largest number among all numbers is at position 3rd, this test case should pass
+        /// TC1.3 When Three floats are given to the method and largest number among all numbers is at position 3rd, this test case should pass
         /// </summary>
         /// <param name="firstValue">firstValue contain float value</param>
         /// <param name="secondValue">secondValue contain float value</param>
@@ -95,6 +95,50 @@ namespace MaxNumberTest
             Assert.AreEqual(expectedResult, result);
         }
 
+        /// <summary>
+        /// TC1.1 When Three strings are given to the method and largest number among all numbers is at position 1st, this test case should pass
+        /// </summary>
+        /// <param name="firstValue">firstValue will return, since its precedes </param>
+        /// <param name="secondValue">secondValue contain string value</param>
+        /// <param name="thirdValue">thirdValue  contain string value</param>
+        [TestMethod]
+        [DataRow("Zebra", "Peach", "Banana")]
+        public void GivenThreeString_WhenMaxStringAtPositionOne_ShouldReturnThatValue(string firstValue, string secondValue, string thirdValue)
+        {
+            string expectedResult = firstValue;
+            string result = FindMaximumNumber.FindMaxString(firstValue, secondValue, thirdValue);
+            Assert.AreEqual(expectedResult, result);
+        }
+
+        /// <summary>
+        /// TC1.2 When Three strings are given to the method and largest number among all strings is at position 2nd, this test case should pass
+        /// </summary>
+        /// <param name="firstValue">firstValue will contain string value</param>
+        /// <param name="secondValue">secondValue will return, since its precedes </param>
+        /// <param name="thirdValue">thirdValue  contain string value</param>
+        [TestMethod]
+        [DataRow("Apple", "Peach", "Banana")]
+        public void GivenThreeStrings_WhenMaxStringAtPositionTwo_ShouldReturnThatValue(string firstValue, string secondValue, string thirdValue)
+        {
+            string expectedResult = secondValue;
+            string result = FindMaximumNumber.FindMaxString(firstValue, secondValue, thirdValue);
+            Assert.AreEqual(expectedResult, result);
+        }
+
+        /// <summary>
+        /// TC1.3 When Three strings are given to the method and largest number among all numbers is at position 3rd, this test case should pass
+        /// </summary>
+        /// <param name="firstValue">firstValue contain string value</param>
+        /// <param name="secondValue">secondValue contain string value</param>
+        /// <param name="thirdValue">thirdValue will return, since its precedes </param>
+        [TestMethod]
+        [DataRow("Apple", "Banana","Yogart")]
+        public void GivenThreeString_WhenMaxStringAtPositionThree_ShouldReturnThatValue(string firstValue, string secondValue, string thirdValue)
+        {
+            string expectedResult = thirdValue;
+            string result = FindMaximumNumber.FindMaxString(firstValue, secondValue, thirdValue);
+            Assert.AreEqual(expectedResult, result);
+        }
 
     }
 }
