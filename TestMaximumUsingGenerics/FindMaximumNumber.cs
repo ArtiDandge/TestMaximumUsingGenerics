@@ -6,7 +6,7 @@ namespace TestMaximumUsingGenerics
 {
     public class FindMaximumNumber
     {
-
+       
         /// <summary>
         /// This method returns largest numbers among all 3 integer numbers 
         /// </summary>
@@ -14,7 +14,7 @@ namespace TestMaximumUsingGenerics
         /// <param name="secondValue">secondValue is of integer type</param>
         /// <param name="thirdValue">thirdValue is of integer type</param>
         /// <returns></returns>
-        public static int FindMaxIntNumber(int firstValue, int secondValue, int thirdValue)
+        public static T FindMaximum<T>(T firstValue, T secondValue, T thirdValue) where T: System.IComparable<T>
         {
             if(firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0 ||
                firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) > 0 ||
@@ -36,61 +36,6 @@ namespace TestMaximumUsingGenerics
             }
             return firstValue;
         }
-
-        /// <summary>
-        /// This method returns largest numbers among all 3 float numbers 
-        /// </summary>
-        /// <param name="firstValue">firstValue is of float type</param>
-        /// <param name="secondValue">secondValue is of float type</param>
-        /// <param name="thirdValue">thirdValue is of float type</param>
-        /// <returns></returns>
-        public static float FindMaxFloatNumber(float firstValue, float secondValue, float thirdValue)
-        {
-            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0 ||
-               firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) > 0 ||
-               firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) >= 0)
-            {
-                return firstValue;
-            }
-            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0 ||
-                secondValue.CompareTo(firstValue) >= 0 && secondValue.CompareTo(thirdValue) > 0 ||
-                secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) >= 0)
-            {
-                return secondValue;
-            }
-            if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0 ||
-                thirdValue.CompareTo(firstValue) >= 0 && thirdValue.CompareTo(secondValue) > 0 ||
-                thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) >= 0)
-            {
-                return thirdValue;
-            }
-            return firstValue;
-        }
-
-        /// <summary>
-        /// This method returns largest numbers among all 3 string numbers 
-        /// </summary>
-        /// <param name="firstValue">firstValue is of string type</param>
-        /// <param name="secondValue">secondValue is of string type</param>
-        /// <param name="thirdValue">thirdValue is of string type</param>
-        /// <returns></returns>
-        public static string FindMaxString(string firstValue, string secondValue, string thirdValue)
-        {
-            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
-            {
-                return firstValue;
-            }
-            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
-            {
-                return secondValue;
-            }
-            if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0)
-            {
-                return thirdValue;
-            }
-            return firstValue;
-        }
-
 
     }
 }

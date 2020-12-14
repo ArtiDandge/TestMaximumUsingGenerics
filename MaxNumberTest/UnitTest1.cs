@@ -16,7 +16,7 @@ namespace MaxNumberTest
         public void GivenThreeIntegers_WhenMaxIntegerAtPositionOne_ShouldReturnThatValue(int firstValue, int secondValue, int thirdValue)
         {
             int expectedResult = firstValue;
-            int result = FindMaximumNumber.FindMaxIntNumber(firstValue, secondValue, thirdValue);
+            int result = FindMaximumNumber.FindMaximum<int>(firstValue, secondValue, thirdValue);
             Assert.AreEqual(expectedResult, result);
         }
 
@@ -31,7 +31,7 @@ namespace MaxNumberTest
         public void GivenThreeIntegers_WhenMaxIntegerAtPositionTwo_ShouldReturnThatValue(int firstValue, int secondValue, int thirdValue)
         {
             int expectedResult = secondValue;
-            int result = FindMaximumNumber.FindMaxIntNumber(firstValue, secondValue, thirdValue);
+            int result = FindMaximumNumber.FindMaximum<int>(firstValue, secondValue, thirdValue);
             Assert.AreEqual(expectedResult, result);
         }
 
@@ -46,7 +46,7 @@ namespace MaxNumberTest
         public void GivenThreeIntegers_WhenMaxIntegerAtPositionThree_ShouldReturnThatValue(int firstValue, int secondValue, int thirdValue)
         {
             int expectedResult = thirdValue;
-            int result = FindMaximumNumber.FindMaxIntNumber(firstValue, secondValue, thirdValue);
+            int result = FindMaximumNumber.FindMaximum<int>(firstValue, secondValue, thirdValue);
             Assert.AreEqual(expectedResult, result);
         }
 
@@ -61,7 +61,7 @@ namespace MaxNumberTest
         public void GivenThreeFloat_WhenMaxFloatAtPositionOne_ShouldReturnThatValue(float firstValue, float secondValue, float thirdValue)
         {
             float expectedResult = firstValue;
-            float result = FindMaximumNumber.FindMaxFloatNumber(firstValue, secondValue, thirdValue);
+            float result = FindMaximumNumber.FindMaximum<float>(firstValue, secondValue, thirdValue);
             Assert.AreEqual(expectedResult, result);
         }
 
@@ -76,7 +76,7 @@ namespace MaxNumberTest
         public void GivenThreeFloat_WhenMaxFloatAtPositionTwo_ShouldReturnThatValue(float firstValue, float secondValue, float thirdValue)
         {
             float expectedResult = secondValue;
-            float result = FindMaximumNumber.FindMaxFloatNumber(firstValue, secondValue, thirdValue);
+            float result = FindMaximumNumber.FindMaximum<float>(firstValue, secondValue, thirdValue);
             Assert.AreEqual(expectedResult, result);
         }
 
@@ -91,7 +91,7 @@ namespace MaxNumberTest
         public void GivenThreeFloat_WhenMaxFloatAtPositionThree_ShouldReturnThatValue(float firstValue, float secondValue, float thirdValue)
         {
             float expectedResult = thirdValue;
-            float result = FindMaximumNumber.FindMaxFloatNumber(firstValue, secondValue, thirdValue);
+            float result = FindMaximumNumber.FindMaximum<float>(firstValue, secondValue, thirdValue);
             Assert.AreEqual(expectedResult, result);
         }
 
@@ -106,7 +106,7 @@ namespace MaxNumberTest
         public void GivenThreeString_WhenMaxStringAtPositionOne_ShouldReturnThatValue(string firstValue, string secondValue, string thirdValue)
         {
             string expectedResult = firstValue;
-            string result = FindMaximumNumber.FindMaxString(firstValue, secondValue, thirdValue);
+            string result = FindMaximumNumber.FindMaximum<string>(firstValue, secondValue, thirdValue);
             Assert.AreEqual(expectedResult, result);
         }
 
@@ -121,7 +121,7 @@ namespace MaxNumberTest
         public void GivenThreeStrings_WhenMaxStringAtPositionTwo_ShouldReturnThatValue(string firstValue, string secondValue, string thirdValue)
         {
             string expectedResult = secondValue;
-            string result = FindMaximumNumber.FindMaxString(firstValue, secondValue, thirdValue);
+            string result = FindMaximumNumber.FindMaximum<string>(firstValue, secondValue, thirdValue);
             Assert.AreEqual(expectedResult, result);
         }
 
@@ -136,7 +136,7 @@ namespace MaxNumberTest
         public void GivenThreeString_WhenMaxStringAtPositionThree_ShouldReturnThatValue(string firstValue, string secondValue, string thirdValue)
         {
             string expectedResult = thirdValue;
-            string result = FindMaximumNumber.FindMaxString(firstValue, secondValue, thirdValue);
+            string result = FindMaximumNumber.FindMaximum<string>(firstValue, secondValue, thirdValue);
             Assert.AreEqual(expectedResult, result);
         }
 
