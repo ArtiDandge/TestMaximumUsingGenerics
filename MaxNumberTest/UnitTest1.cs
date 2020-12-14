@@ -49,5 +49,52 @@ namespace MaxNumberTest
             int result = FindMaximumNumber.FindMaxIntNumber(firstValue, secondValue, thirdValue);
             Assert.AreEqual(expectedResult, result);
         }
+
+        /// <summary>
+        /// TC1.1 When Three Float are given to the method and largest number among all numbers is at position 1st, this test case should pass
+        /// </summary>
+        /// <param name="firstValue">firstValue will be maximum of all three Float values</param>
+        /// <param name="secondValue">secondValue contain Float value</param>
+        /// <param name="thirdValue">thirdValue  contain Float value</param>
+        [TestMethod]
+        [DataRow(54.3f, 4.3f, 3.2f)]
+        public void GivenThreeFloat_WhenMaxFloatAtPositionOne_ShouldReturnThatValue(float firstValue, float secondValue, float thirdValue)
+        {
+            float expectedResult = firstValue;
+            float result = FindMaximumNumber.FindMaxFloatNumber(firstValue, secondValue, thirdValue);
+            Assert.AreEqual(expectedResult, result);
+        }
+
+        /// <summary>
+        /// TC1.2 When Three Float are given to the method and largest number among all numbers is at position 2nd, this test case should pass
+        /// </summary>
+        /// <param name="firstValue">firstValue will contain float value</param>
+        /// <param name="secondValue">secondValue will be maximum of all three float values</param>
+        /// <param name="thirdValue">thirdValue  contain float value</param>
+        [TestMethod]
+        [DataRow(22.3f, 345.3f, 4.32f)]
+        public void GivenThreeFloat_WhenMaxFloatAtPositionTwo_ShouldReturnThatValue(float firstValue, float secondValue, float thirdValue)
+        {
+            float expectedResult = secondValue;
+            float result = FindMaximumNumber.FindMaxFloatNumber(firstValue, secondValue, thirdValue);
+            Assert.AreEqual(expectedResult, result);
+        }
+
+        /// <summary>
+        /// TC1.3 When Three float are given to the method and largest number among all numbers is at position 3rd, this test case should pass
+        /// </summary>
+        /// <param name="firstValue">firstValue contain float value</param>
+        /// <param name="secondValue">secondValue contain float value</param>
+        /// <param name="thirdValue">thirdValue will be maximum of all three float values </param>
+        [TestMethod]
+        [DataRow(53.3f, 3.53f, 83.2f)]
+        public void GivenThreeFloat_WhenMaxFloatAtPositionThree_ShouldReturnThatValue(float firstValue, float secondValue, float thirdValue)
+        {
+            float expectedResult = thirdValue;
+            float result = FindMaximumNumber.FindMaxFloatNumber(firstValue, secondValue, thirdValue);
+            Assert.AreEqual(expectedResult, result);
+        }
+
+
     }
 }
