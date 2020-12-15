@@ -79,5 +79,14 @@ namespace TestMaximumUsingGenerics
             return Max;
         }
       
+        /// <summary>
+        /// Print max value
+        /// </summary>
+        public void PrintMAxValue()
+        {
+            var max = MaxValue(this.value);
+            Console.WriteLine("MAximum value is : " +max);
+        }
+
     }
 }

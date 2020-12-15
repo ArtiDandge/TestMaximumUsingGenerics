@@ -141,5 +141,40 @@ namespace MaxNumberTest
             Assert.AreEqual(expectedResult, result);
         }
 
+        /// <summary>
+        /// Test case to find max value using generic class and method
+        /// </summary>
+        [TestMethod]
+        public void GiventIntegerArray_WhenSort_ShouldReturnMAxValue()
+        {
+            int[] arr = { 23, 35, 87, 233, 3,44, 98 }; 
+            FindMaximumNumber<int> max = new FindMaximumNumber<int>(arr);
+            int result = max.MaxMEthod();
+            Assert.AreEqual(233, result);
+        }
+
+        /// <summary>
+        /// Test case to find max value using generic class and method
+        /// </summary>
+        [TestMethod]
+        public void GiventFloatArray_WhenSort_ShouldReturnMAxValue()
+        {
+            float[] arr = { 23.3f, 45.5f, 87.4f, 23.3f, 4.3f, 44.4f, 9.8f };
+            FindMaximumNumber<float> max = new FindMaximumNumber<float>(arr);
+            float result = max.MaxMEthod();
+            Assert.AreEqual(87.4f, result);
+        }
+
+        /// <summary>
+        /// Test case to find max value using generic class and method
+        /// </summary>
+        [TestMethod]
+        public void GiventStringArray_WhenSort_ShouldReturnMAxValue()
+        {
+            string[] arr = { "Apple", "Peach","Banana"};
+            FindMaximumNumber<string> max = new FindMaximumNumber<string>(arr);
+            string result = max.MaxMEthod();
+            Assert.AreEqual("Peach", result);
+        }
     }
 }
