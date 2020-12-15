@@ -21,6 +21,11 @@ namespace TestMaximumUsingGenerics
             Console.WriteLine("-------------Comaparision of String------------");
             Console.WriteLine(FindMaximumNumber<string>.FindMaximum("Apple","Peach","Banana"));
             Console.WriteLine(FindMaximumNumber<string>.FindMaximum("Zebra", "Peach", "Banana"));
-        }
+
+            Console.WriteLine("--------------------Generics Class and Method-------------------------");
+            int[] arr = { 23, 345, 456, 456, 456, 332 };
+            FindMaximumNumber<int> generic = new FindMaximumNumber<int>(arr);
+
+         }
     }
 }
