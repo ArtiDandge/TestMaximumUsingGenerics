@@ -4,17 +4,18 @@ using System.Text;
 
 namespace TestMaximumUsingGenerics
 {
-    public class FindMaximumNumber
+    public class FindMaximumNumber<T> where T : System.IComparable<T>
     {
-       
+        public T firstValue, secondValue, thirdValue;
+
         /// <summary>
-        /// This method returns largest numbers among all 3 integer numbers 
+        /// This method returns largest  among all 3 numbers uisng Generinc Class
         /// </summary>
-        /// <param name="firstValue">firstValue is of integer type</param>
-        /// <param name="secondValue">secondValue is of integer type</param>
-        /// <param name="thirdValue">thirdValue is of integer type</param>
+        /// <param name="firstValue">firstValue is of Generinc type</param>
+        /// <param name="secondValue">secondValue is of Generinc type</param>
+        /// <param name="thirdValue">thirdValue is of Generinc type</param>
         /// <returns></returns>
-        public static T FindMaximum<T>(T firstValue, T secondValue, T thirdValue) where T: System.IComparable<T>
+        public static T FindMaximum(T firstValue, T secondValue, T thirdValue)
         {
             if(firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0 ||
                firstValue.CompareTo(secondValue) >= 0 && firstValue.CompareTo(thirdValue) > 0 ||
