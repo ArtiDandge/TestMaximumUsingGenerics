@@ -12,7 +12,6 @@ namespace TestMaximumUsingGenerics
             Console.WriteLine("Max value among 64, 533, 12 is \t " + FindMaximumNumber<int>.FindMaximum(64, 533, 12));
             Console.WriteLine("Max value among 643, 53, 1312 is \t " + FindMaximumNumber<int>.FindMaximum(643, 53, 1312));
 
-
             Console.WriteLine("-------------Comaparision of Float------------");
             Console.WriteLine("Max value among 6.4f, 5.3f, 1.2f is \t " + FindMaximumNumber<float>.FindMaximum(6.4f, 5.3f, 1.2f));
             Console.WriteLine("Max value among 6.4f, 53.3f, 2f is \t " + FindMaximumNumber<float>.FindMaximum(6.4f, 53.3f, 2f));

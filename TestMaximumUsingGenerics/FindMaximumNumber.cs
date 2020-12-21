@@ -87,6 +87,5 @@ namespace TestMaximumUsingGenerics
             var max = MaxValue(this.value);
             Console.WriteLine("MAximum value is : " +max);
         }
-
     }
 }
